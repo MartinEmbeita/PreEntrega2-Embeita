@@ -1,0 +1,25 @@
+.NavContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  color: white;
+}
+
+.links-container {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 1.5rem;
+}
+
+img {
+  width: 60px;
+  margin-left: 15px;
+}
