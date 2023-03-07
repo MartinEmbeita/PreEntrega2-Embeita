@@ -1,25 +1,25 @@
 export default [
   {
     id: "1", 
-    name: "Producto", 
+    name: "Remera", 
     decription: "Lorem ipsum", 
     stock: 5,
   },
   {
     id: "2", 
-    name: "Producto", 
+    name: "Pantalon", 
     decription: "Lorem ipsum", 
     stock: 5,
   },
   {
     id: "3", 
-    name: "Producto", 
+    name: "Zapatillas", 
     decription: "Lorem ipsum", 
     stock: 5,
   },
   {
     id: "4", 
-    name: "Producto", 
+    name: "Campera", 
     decription: "Lorem ipsum", 
     stock: 5,
   },
