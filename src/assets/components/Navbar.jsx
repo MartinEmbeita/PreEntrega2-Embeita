@@ -11,7 +11,7 @@ function NavBar() {
           <a href="*/">Productos</a>
           <a href="*/">Contacto</a>
         </div>
-        <CartWidget cartIcon="https://i.pinimg.com/originals/31/3c/11/313c1187480abab29cbfabfc39c8b9be.png" cartCount={10} />
+        <CartWidget cartCount={10} />
       </div>
     </div>
   )
