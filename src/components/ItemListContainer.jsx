@@ -1,6 +1,6 @@
 import React from "react";
 import {useEffect, useState} from "react";
-import Products from "../../mocks/products";
+import Products from "../mocks/products";
 import ItemList from "../components/ItemList";
 
 function ItemListContainer(props) {
