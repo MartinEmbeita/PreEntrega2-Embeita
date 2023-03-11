@@ -3,9 +3,15 @@
   justify-content: space-between;
   align-items: center;
   background-color: #333;
-  padding: 10px;
+  padding: 15px;
   color: white;
 }
+
+.NavContainer img {
+  width: 60px;
+  border:hidden
+}
+
 
 .links-container {
   display: flex;
@@ -15,11 +21,22 @@
 a {
   color: white;
   text-decoration: none;
-  margin-left: 15px;
+  margin-left: 30px;
   font-size: 1.5rem;
 }
 
 img {
-  width: 60px;
-  margin-left: 15px;
+  width: 150px;
+}
+
+button {
+  display: block;
+  width: 30%;
+  height: 10%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: blue;
+  color: #fff;
+  margin: auto;
 }

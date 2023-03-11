@@ -1,0 +1,33 @@
+div.contenedorProductos {
+  padding: 3em;
+}
+
+ul.productList {
+  display: flex;
+  gap: 1.5em;
+}
+
+.contenedorProductos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 300px;
+  padding: 2px;
+  gap: 15px;
+  background-color: white;
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(189, 47, 47);
+}
+
+img {
+-webkit-box-shadow: 10px 11px 11px -4px rgba 0, 0, 0.36;
+-moz-box-shadow: 10px 11px 11px -4px rgba(0, 0, 0, 0.36);
+box-shadow: 10px 11px 11px -4px rgba(0, 0, 0, 0.36);
+border: solid black 2px;
+}
+
+#nombreProducto {
+  font-size: 2.5rem;
+  text-decoration: underline;
+  color: rgb(189, 47, 47);
+}

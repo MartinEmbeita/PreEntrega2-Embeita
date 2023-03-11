@@ -1,26 +1,23 @@
-import React from "react";
-import {useEffect, useState} from "react";
-import Products from "../mocks/products";
-import ItemList from "../components/ItemList";
+import Productos from "../mocks/products";
+import { useState, useEffect } from "react";
+import ItenList from "../components/ItemList/index";
 
-function ItemListContainer(props) {
-  const [products, setProducts] = useState([]);
+function ItemListContainer() {
+  const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    const productsPromise = new Promise((resolve, reject) => 
-      setTimeout(() => resolve(Products), 2000)
+    const promesaProductos = new Promise((resolve, reject) =>
+      setTimeout(() => resolve(Productos))
     );
 
-    productsPromise
-      .then((response) => setProducts(response))
+    promesaProductos
+      .then((response) => setProductos(response))
       .catch((err) => console.log(err));
   }, []);
 
-  console.log({products});
-
   return (
-    <div className="container">
-      <ItemList products={products} />
+    <div>
+      <ItenList productos={productos} />
     </div>
   );
 }
