@@ -1,9 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
+import React from "react"
+import ReactDOM from "react-dom/client"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "../src/routes/root"
 import './index.css'
-import { createBrowserRouter, RouterProvider, } from "react-router-dom";
-
+import ItemRoot from "./routes/item";
 
 const router = createBrowserRouter([
   {
@@ -12,11 +12,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/category/:id",
-    element: <div>Hello world!</div>,
+    element: <App />,
   },
   {
     path: "/item/:id",
-    element: <div>Hello world!</div>,
+    element: <ItemRoot />,
   },
   {
     path: "/cart",
@@ -28,8 +28,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}>
+      <App />
+    </RouterProvider>
   </React.StrictMode>,
-)
+);

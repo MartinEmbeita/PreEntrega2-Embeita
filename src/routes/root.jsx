@@ -1,18 +1,21 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../components/Navbar";
 import ItemListContainer from "../components/ItemListContainer";
-import { useParams } from "react-router-dom";
+import {useParams} from "react-router-dom";
 
-function Root() {
+function App() {
   const params = useParams();
   const isCategoryRoute = Boolean(params.id);
+
   console.log(isCategoryRoute);
 
   return (
-    <div className="App">
+    <div>
       <NavBar />
-      <ItemListContainer />
+      <ItemListContainer isCategoryRoute={isCategoryRoute} categoryId={params.id} />
     </div>
-  );
+  )
 }
 
-export default Root;
+export default App;
+
+

@@ -10,7 +10,6 @@ ul {
 .contenedorProductos {
   display: grid;
   grid-auto-rows: 500px;
-  padding: 100px;
   gap: 50px;
   text-align: center;
   color: rgb(189, 47, 47);
@@ -19,8 +18,8 @@ ul {
 }
 
 img {
--webkit-box-shadow: 10px 11px 11px -4px rgba 0, 0, 0.36;
--moz-box-shadow: 10px 11px 11px -4px rgba(0, 0, 0, 0.36);
-box-shadow: 10px 11px 11px -4px rgba(0, 0, 0, 0.36);
-border: solid black 2px;
+  -webkit-box-shadow: 10px 11px 11px -4px rgba 0, 0, 0.36;
+  -moz-box-shadow: 10px 11px 11px -4px rgba(0, 0, 0, 0.36);
+  box-shadow: 10px 11px 11px -4px rgba(0, 0, 0, 0.36);
+  border: solid black 2px;
 }

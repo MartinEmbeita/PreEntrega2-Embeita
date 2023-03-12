@@ -6,9 +6,9 @@ function NavBar() {
       <h2>Compañeros Peludos - Tienda Online</h2>
       <div className="links-container">
         <div className="nav-links">
-          <a href="*/">Home</a>
-          <a href="*/">Productos</a>
-          <a href="*/">Contacto</a>
+          <a href="/">Home</a>
+          <a href="/category/perros">Perros</a>
+          <a href="/category/gatos">Gatos</a>
         </div>
         <CartWidget cartCount={10} />
       </div>
@@ -17,3 +17,5 @@ function NavBar() {
 }
 
 export default NavBar;
+
+

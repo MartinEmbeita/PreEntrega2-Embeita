@@ -1,25 +1,36 @@
 import Productos from "../mocks/products";
 import { useState, useEffect } from "react";
-import ItenList from "../components/ItemList/index";
+import ItemList from "../components/ItemList/index";
 
-function ItemListContainer() {
-  const [productos, setProductos] = useState([]);
+function ItemListContainer({ categoryId, isCategoryRoute }) {
+  const [productos, setProducts] = useState([]);
 
   useEffect(() => {
-    const promesaProductos = new Promise((resolve, reject) =>
-      setTimeout(() => resolve(Productos))
+    const productsPromise = new Promise((resolve, reject) =>
+      setTimeout(() => resolve(Productos), 2000)
     );
 
-    promesaProductos
-      .then((response) => setProductos(response))
+    productsPromise
+      .then((response) => {
+        if(isCategoryRoute) {
+        const productsFiltered = response.filter(
+          (product) => product.category === categoryId
+        );
+        setProducts(productsFiltered);
+        } else {
+          setProducts(response);
+        }
+      })
       .catch((err) => console.log(err));
-  }, []);
+  }, [isCategoryRoute]);
 
   return (
     <div>
-      <ItenList productos={productos} />
+      <ItemList productos={productos} />
     </div>
   );
 }
 
 export default ItemListContainer;
+
+

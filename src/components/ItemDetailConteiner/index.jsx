@@ -1,7 +1,7 @@
 import React from "react";
 
 function ItemDetailContainer() {
-  return <div>Item Detail Container</div>;
+  return <div>Hello World!</div>;
 }
 
 export default ItemDetailContainer;

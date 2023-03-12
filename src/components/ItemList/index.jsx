@@ -1,7 +1,7 @@
 import Item from "../Item";
 import "../ItemList/index.css";
 
-function ItenList({ productos }) {
+function ItemList({ productos }) {
   return (
     <div className="contenedorProductos">
       <ul className="productList">
@@ -13,4 +13,6 @@ function ItenList({ productos }) {
   );
 }
 
-export default ItenList;
+export default ItemList;
+
+

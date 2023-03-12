@@ -1,8 +1,12 @@
+html {
+  background-color: rgb(244, 244, 234);
+}
+
 .NavContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #484747;
   padding: 15px;
   color: white;
 }
@@ -11,7 +15,6 @@
   width: 60px;
   border:hidden
 }
-
 
 .links-container {
   display: flex;
