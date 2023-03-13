@@ -1,5 +1,6 @@
 div.productConteiner {
-  padding: 5em;
+  padding: 1em;
+  margin: auto;
 }
 
 ul {
@@ -10,7 +11,7 @@ ul {
 .productConteiner {
   display: grid;
   grid-auto-rows: 500px;
-  gap: 50px;
+  gap: 10px;
   text-align: center;
   line-height: 1.5;
   color: rgb(26, 8, 8);
@@ -23,4 +24,9 @@ img {
   -moz-box-shadow: 10px 11px 11px -4px rgba(0, 0, 0, 0.36);
   box-shadow: 10px 11px 11px -4px rgba(0, 0, 0, 0.36);
   border: solid black 2px;
+}
+
+.card {
+  border: 1px solid #0f0f10;
+  margin: 10px;
 }

@@ -8,7 +8,7 @@ function Item({ product }) {
         src={product.image}
         style={{ minHeight: "10em", maxHeight: "10em", overflow: "hidden" }}
       />
-      <Card.Title>{product.name}</Card.Title>
+      <Card.Title><b>{product.name}</b></Card.Title>
       <Card.Title>{product.description}</Card.Title>
       <Card.Title>${product.price}</Card.Title>
       <Button className="m-3" variant="success">
