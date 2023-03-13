@@ -1,4 +1,4 @@
-div.contenedorProductos {
+div.productConteiner {
   padding: 5em;
 }
 
@@ -7,12 +7,13 @@ ul {
   gap: 1.5em;
 }
 
-.contenedorProductos {
+.productConteiner {
   display: grid;
   grid-auto-rows: 500px;
   gap: 50px;
   text-align: center;
-  color: rgb(189, 47, 47);
+  line-height: 1.5;
+  color: rgb(26, 8, 8);
   font-size: 17px;
   font-weight: bolder;
 }
