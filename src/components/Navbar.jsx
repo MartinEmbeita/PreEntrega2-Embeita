@@ -1,4 +1,5 @@
-import CartWidget from "../components/CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
+import CartWidget from "./CartWidget/CartWidget";
 
 function NavBar() {
   return (
@@ -6,9 +7,9 @@ function NavBar() {
       <h2>Compañeros Peludos - Tienda Online</h2>
       <div className="links-container">
         <div className="nav-links">
-          <a href="/">Home</a>
-          <a href="/category/perros">Perros</a>
-          <a href="/category/gatos">Gatos</a>
+          <NavLink exact to="/">Home</NavLink>
+          <NavLink to="/category/perros">Perros</NavLink>
+          <NavLink to="/category/gatos">Gatos</NavLink>
         </div>
         <CartWidget cartCount={10} />
       </div>
@@ -17,5 +18,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-
