@@ -6,8 +6,6 @@ function App() {
   const params = useParams();
   const isCategoryRoute = Boolean(params.id);
 
-  console.log(isCategoryRoute);
-
   return (
     <div>
       <NavBar />

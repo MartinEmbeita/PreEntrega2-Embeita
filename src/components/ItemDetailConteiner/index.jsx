@@ -19,7 +19,7 @@ function ItemDetailContainer({ isItemRoute, itemId }) {
           console.log();
           setDetalles(productFind);
         } else {
-          setDetalles(<h2>El producto no fue encontrado</h2>);
+          setDetalles(<h2>Por favor reingrese su petición</h2>);
         }
       })
       .catch((err) => console.log(err));
@@ -27,7 +27,7 @@ function ItemDetailContainer({ isItemRoute, itemId }) {
 
   return (
     <div>
-      <div>Item Detail Container</div>
+      <div>ItemDetailContainer</div>
       <ItemDetail items={detalles} />
     </div>
   );
