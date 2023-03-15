@@ -10,7 +10,7 @@ function Item({ product }) {
       />
       <Card.Title><b>{product.name}</b></Card.Title>
       <Card.Title>{product.description}</Card.Title>
-      <Card.Title>${product.price}</Card.Title>
+      <Card.Title>${product.price} x unidad</Card.Title>
       <Button className="m-3" variant="success">
         Comprar{" "}
       </Button>
