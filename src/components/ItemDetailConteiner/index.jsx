@@ -16,18 +16,16 @@ function ItemDetailContainer({ isItemRoute, itemId }) {
           const productFind = response.find(
             (item) => item.id === itemId
           );
-          console.log();
           setDetalles(productFind);
         } else {
           setDetalles(<h2>Por favor reingrese su petición</h2>);
         }
       })
       .catch((err) => console.log(err));
-  }, [itemId]);
+  }, [itemId, isItemRoute]);
 
   return (
     <div>
-      <div>ItemDetailContainer</div>
       <ItemDetail items={detalles} />
     </div>
   );

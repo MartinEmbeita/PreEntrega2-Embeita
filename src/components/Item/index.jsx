@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import Products from "../../mocks/products";
 import "./item.css";
-import { ItemCount } from "../ItemCount/index";
+import { ItemCount } from "../ItenCount/index";
 
 const product = Products;
 
 const Item = ({ product }) => {
   return (
     <div className="product-container">
-      <Link to={`/product/${product.id}`}>
+      <Link to={"/item/${product.id}"}>
         <div className="product-card">
           <img className="product-image" src={product.image} alt={product.name} />
           <div className="product-name">
