@@ -1,27 +1,21 @@
 import { Link } from "react-router-dom";
-import Products from "../../mocks/products";
 import "./item.css";
-import { ItemCount } from "../ItenCount/index";
-
-const product = Products;
 
 const Item = ({ product }) => {
   return (
     <div className="product-container">
-      <Link to={"/item/${product.id}"}>
+      <Link to={`/item/${product.id}`}>
         <div className="product-card">
           <img className="product-image" src={product.image} alt={product.name} />
           <div className="product-name">
-            <h1>{product.name}</h1>
-          </div>
-          <div className="product-description">
-            <h2>{product.description}</h2>
+            <h3>{product.name}</h3>
           </div>
           <div className="product-price">
             <h2>${product.price}</h2>
           </div>
-          <ItemCount stock={product.stock} />
-          <button className="product-button">Comprar</button>
+          <div className="product-description">
+            <p>{product.description}</p>
+          </div>
         </div>
       </Link>
     </div>

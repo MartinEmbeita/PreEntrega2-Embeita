@@ -8,7 +8,9 @@ function ItemList({ products }) {
     <div className="productContainer">
       <ul className="productList">
         {products.map((product) => (
-            <Item key={product.id} product={product} />
+          <Link key={product.id} to={`/item/${product.id}`}>
+            <Item product={product} />
+          </Link>
         ))}
       </ul>
     </div>
