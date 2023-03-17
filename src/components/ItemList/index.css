@@ -1,4 +1,4 @@
-div.productConteiner {
+.productContainer {
   padding: 1em;
   margin: auto;
 }
@@ -8,7 +8,7 @@ ul {
   gap: 1.5em;
 }
 
-.productConteiner {
+.productContainer {
   display: grid;
   grid-auto-rows: 500px;
   gap: 10px;

@@ -9,7 +9,8 @@ export default [
     name: "PEDIGREE", 
     price: 1500, 
     description: "Alimento con minerales de alta nutrición", 
-    category: "perros", 
+    category: "perros",
+    stock: 5, 
     image: Pedigree,
   },
   {
@@ -17,7 +18,8 @@ export default [
     name: "PROPLAN", 
     price: 2100, 
     description: "Alimento para necesidades nutrimentales", 
-    category: "gatos", 
+    category: "gatos",
+    stock: 5, 
     image: Proplan,
   },
   {
@@ -25,7 +27,8 @@ export default [
     name: "ROYAL CANIN", 
     price: 1950, 
     description: "Alimentos con componentes naturales", 
-    category: "perros", 
+    category: "perros",
+    stock: 5, 
     image: RoyalCanin,
   },
   {
@@ -33,7 +36,8 @@ export default [
     name: "WHISKAS", 
     price: 1600, 
     description: "Alimento para el tracto urinario sano", 
-    category: "gatos", 
+    category: "gatos",
+    stock: 5, 
     image: Whiskas,
   },
 ];
