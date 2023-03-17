@@ -65,3 +65,8 @@ button {
   color: #fff;
   margin: auto;
 }
+
+.product-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
