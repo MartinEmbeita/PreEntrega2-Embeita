@@ -19,7 +19,7 @@ export default [
     name: "PROPLAN", 
     price: 2100, 
     description: "Alimento para necesidades nutrimentales", 
-    detail: "Alimento Pro Plan OptiHealth para perro adulto de raza mediana sabor pollo y arroz en bolsa de 18 kg. 84% OFF.",
+    detail: "Alimento Pro Plan OptiHealth para gato adulto de raza mediana sabor pollo y arroz en bolsa de 18 kg. 84% OFF.",
     category: "gatos",
     stock: 5, 
     image: Proplan,
