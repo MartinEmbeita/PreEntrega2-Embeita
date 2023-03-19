@@ -10,7 +10,7 @@ const ItemDetail = () => {
   const product = Products.find((product) => product.id === parseInt(id));
 
   const handleClick = () => {
-    alert("¡Has hecho clic en el botón Comprar!");
+    alert("¡Hiciste una compra!");
   };
 
   return (
@@ -23,7 +23,7 @@ const ItemDetail = () => {
           <h2>{product.name} - ${product.price}</h2>
           <p className="item-detail-description">{product.detail}</p>
           <ItemCount stock={product.stock} />
-          <Button onClick={handleClick} className="buy-button">Comprar</Button>
+          <Button onClick={handleClick} >Comprar</Button>
         </div>
       </div>
     </div>
