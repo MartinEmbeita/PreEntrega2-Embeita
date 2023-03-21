@@ -7,7 +7,7 @@ function NavBar() {
       <h2>Compañeros Peludos - Tienda Online</h2>
       <div className="links-container">
         <div className="nav-links">
-          <NavLink exact to="/">Home</NavLink>
+          <NavLink exact to="/">Catalogo</NavLink>
           <NavLink to="/category/perros">Perros</NavLink>
           <NavLink to="/category/gatos">Gatos</NavLink>
         </div>
