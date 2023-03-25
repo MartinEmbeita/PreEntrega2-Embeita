@@ -28,6 +28,21 @@ const router = createBrowserRouter([
   },
 ]);
 
+
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCAJDv5UhSrzuwBTNRHwSML4TLeNsyYdTg",
+  authDomain: "tienda-online-vite.firebaseapp.com",
+  projectId: "tienda-online-vite",
+  storageBucket: "tienda-online-vite.appspot.com",
+  messagingSenderId: "927126580303",
+  appId: "1:927126580303:web:87e63455e58863f88bce3a"
+};
+
+const app = initializeApp(firebaseConfig);
+
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router}>
