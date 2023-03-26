@@ -7,16 +7,19 @@ import { useParams } from "react-router-dom";
 import { Button } from "../Button/index";
 import { Context } from "../context/index";
 
+
 const ItemDetail = () => {
   const { id } = useParams();
   const product = Products.find((product) => product.id === parseInt(id));
 
-  const { onAdd } = useContext(Context);
-  const [added, setAdded] = useState(false);
+  const {onAdd} = useContext(Context);
+  const [added, setAdded] = useState(0);
+
 
   function onAddProduct(count) {
+    setAdded(count);
+
     onAdd(product, count);
-    setAdded(true);
   }
 
   return (
@@ -28,18 +31,20 @@ const ItemDetail = () => {
         <div className="item-detail-info-container">
           <h2>{product.name} - ${product.price}</h2>
           <p className="item-detail-description">{product.detail}</p>
-          {!added && <ItemCount stock={product.stock} onAdd={onAddProduct} />}
+          {added === 0 && <ItemCount stock={product.stock} onAdd={onAddProduct} />}
         </div>
+
         <div>
-          {added && (
+          {added >= 1 && (
             <Link to="/cart">
               <Button>Terminar compra</Button>
             </Link>
-          )}
-        </div>
+           )}
+          </div>
       </div>
     </div>
   );
 };
 
 export default ItemDetail;
+
