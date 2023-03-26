@@ -30,6 +30,7 @@ const router = createBrowserRouter([
 
 
 import { initializeApp } from "firebase/app";
+import { CustomProvider } from "./components/context";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCAJDv5UhSrzuwBTNRHwSML4TLeNsyYdTg",
@@ -45,7 +46,9 @@ const app = initializeApp(firebaseConfig);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-    </RouterProvider>
+    <CustomProvider>
+      <RouterProvider router={router} />
+    </CustomProvider>
   </React.StrictMode>,
 );
+

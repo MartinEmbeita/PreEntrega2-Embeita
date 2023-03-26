@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../context/index";
 
-function CartWidget(props) {
+function CartWidget() {
+  const { productAdded } = useContext(Context);
+
   return (
-    <div className="cart-widget">
-      <img src="../src/assets/imagenes/carrito.png" />
-      <span className="cart-count">{props.cartCount}</span>
-    </div>
+    <button style={{ backgroundColor: "transparent" }}>
+      <img src="../src/assets/imagenes/carrito.png" style={{ backgroundColor: "none" }} />
+      {productAdded.length}
+    </button>
   );
 }
 

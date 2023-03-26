@@ -24,29 +24,6 @@ function ItemDetailContainer({ isItemRoute, itemId }) {
   const params = useParams()
 
 
-
-
-  // const [detalles, setDetalles] = useState({});
-
-  // useEffect(() => {
-  //   const promiseDetail = new Promise((resolve, reject) => {
-  //     resolve(Products);
-  //   });
-
-  //   promiseDetail
-  //     .then((response) => {
-  //       if (isItemRoute) {
-  //         const productFind = response.find(
-  //           (item) => item.id === itemId
-  //         );
-  //         setDetalles(productFind);
-  //       } else {
-  //         setDetalles(<h2>Por favor reingrese su petición</h2>);
-  //       }
-  //     })
-  //     .catch((err) => console.log(err));
-  // }, [itemId, isItemRoute]);
-
   return (
     <div>
       <ItemDetail />
@@ -55,3 +32,5 @@ function ItemDetailContainer({ isItemRoute, itemId }) {
 }
 
 export default ItemDetailContainer;
+
+

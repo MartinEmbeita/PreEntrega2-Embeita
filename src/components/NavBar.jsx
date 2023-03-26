@@ -11,10 +11,11 @@ function NavBar() {
           <NavLink to="/category/perros">Perros</NavLink>
           <NavLink to="/category/gatos">Gatos</NavLink>
         </div>
-        <CartWidget cartCount={10} />
+        <CartWidget />
       </div>
     </div>
   )
 }
 
 export default NavBar;
+

@@ -1,8 +1,9 @@
+import React from "react";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 import "./itemCount.css";
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ stock, onAdd }) => {
   const [counter, setCounter] = useState(1);
 
   return (
@@ -11,7 +12,7 @@ const ItemCount = ({ stock }) => {
       <p>{counter}</p>
       <button className="remove-button" onClick={() => setCounter(counter + 1)} disabled={counter>= stock}> + </button>
       <div className="buy-button-container">
-        <Button onClick={() => onAdd(count)}>
+        <Button onClick={() => onAdd(counter)}>
           Comprar
         </Button>
       </div>
