@@ -30,15 +30,16 @@ export function CustomProvider({ children }) {
     }
   }
 
-  function removeItem(itemId) {}
-  function clear() {}
+  function clearCart() {
+    setProductAdded([]);
+  }
 
   function isInCart(product) {
     return productAdded.find((productAdded) => productAdded.id === product.id);
   }
 
   return (
-    <Context.Provider value={{ productAdded, onAdd }}>
+    <Context.Provider value={{ productAdded, onAdd, clearCart }}>
       {children}
     </Context.Provider>
   );

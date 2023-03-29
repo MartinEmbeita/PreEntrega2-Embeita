@@ -1,42 +1,71 @@
-// import NavBar from "../components/NavBar";
-// import ItemDetailContainer from "../components/ItemDetailConteiner/index";
-
-// function Cart() {
-//   return (
-//     <div>
-//       <NavBar />
-//     </div>
-//   );
-// }
-
-// export default Cart;
-
-import React, { useState, useEffect } from "react";
+import { addDoc, updateDoc, collection, doc, getFirestore } from "firebase/firestore";
+import { useContext, useState } from "react";
+import { Container } from "react-bootstrap";
+import { Context } from "../components/context/index";
 import { useNavigate } from "react-router-dom";
-import NavBar from "../components/NavBar";
 
 function Cart() {
-  const [showMessage, setShowMessage] = useState(true);
+  const { productAdded, clearCart } = useContext(Context);
+  const db = getFirestore();
   const navigate = useNavigate();
+  const [showThanks, setShowThanks] = useState(false);
+  const [showButton, setShowButton] = useState(true);
 
-  useEffect(() => {
-    if (showMessage) {
-      setTimeout(() => {
-        setShowMessage(false);
-        navigate("/");
-      }, 3000);
-    }
-  }, [showMessage, navigate]);
+  function updateOrder(productId, finalStock) {
+    const itemRef = doc(db, "items", productId);
+    updateDoc(itemRef, { stock: finalStock }).catch((error) => console.log({ error }));
+  }
+
+  function sendOrder() {
+    const total = productAdded.reduce(
+      (acc, product) => acc + product.quantity * product.price,
+      0
+    );
+
+    const order = {
+      buyer: { name: "Martin", email: "ejemplo@hotmail.com", phone: "0000000" },
+      items: productAdded,
+      total,
+    };
+
+    const collectionRef = collection(db, "orders");
+    addDoc(collectionRef, order)
+      .then(() => {
+        productAdded.map((product) => {
+          const finalStock = product.stock - product.quantity;
+          updateOrder(product.id, finalStock);
+        });
+      })
+      .catch((error) => console.log({ error }));
+  }
+
+  function sendOrderAndNavigateHome() {
+    sendOrder();
+    clearCart();
+    setShowThanks(true);
+    setShowButton(false);
+    setTimeout(() => {
+      setShowThanks(false);
+      navigate("/");
+    }, 2000);
+  }
 
   return (
-    <div>
-      <NavBar />
-      {showMessage && (
-        <div className="message">
-          GRACIAS POR SU COMPRA, VUELVA PRONTO
+    <Container className="route-container">
+      {productAdded.map((product) => (
+        <div>
+          <span>Name: {product.title}</span>
+          <br />
+          <span>Stock: {product.quantity}</span>
         </div>
+      ))}
+      {showButton && (
+        <button onClick={sendOrderAndNavigateHome}>
+          Pagar
+        </button>
       )}
-    </div>
+      {showThanks && <div style={{ marginTop: "1rem" }}>Gracias por su compra</div>}
+    </Container>
   );
 }
 

@@ -7,14 +7,12 @@ import { useParams } from "react-router-dom";
 import { Button } from "../Button/index";
 import { Context } from "../context/index";
 
-
 const ItemDetail = () => {
   const { id } = useParams();
   const product = Products.find((product) => product.id === parseInt(id));
 
   const {onAdd} = useContext(Context);
   const [added, setAdded] = useState(0);
-
 
   function onAddProduct(count) {
     setAdded(count);
@@ -34,17 +32,16 @@ const ItemDetail = () => {
           {added === 0 && <ItemCount stock={product.stock} onAdd={onAddProduct} />}
         </div>
 
-        <div>
-          {added >= 1 && (
+        {added >= 1 && (
+          <div>
             <Link to="/cart">
               <Button>Terminar compra</Button>
             </Link>
-           )}
           </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default ItemDetail;
-
