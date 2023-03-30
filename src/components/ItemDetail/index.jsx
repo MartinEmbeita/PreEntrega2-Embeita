@@ -35,7 +35,10 @@ const ItemDetail = () => {
         {added >= 1 && (
           <div>
             <Link to="/cart">
-              <Button>Terminar compra</Button>
+              <Button className="button-space">Terminar compra</Button>
+            </Link>
+            <Link to="/">
+              <Button>Seguir comprando</Button>
             </Link>
           </div>
         )}

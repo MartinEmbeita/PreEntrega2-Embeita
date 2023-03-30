@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { Container } from "react-bootstrap";
 import { Context } from "../components/context/index";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/NavBar";
 
 function Cart() {
   const { productAdded, clearCart } = useContext(Context);
@@ -51,21 +52,26 @@ function Cart() {
   }
 
   return (
-    <Container className="route-container">
-      {productAdded.map((product) => (
-        <div>
-          <span>Name: {product.title}</span>
-          <br />
-          <span>Stock: {product.quantity}</span>
-        </div>
-      ))}
-      {showButton && (
-        <button onClick={sendOrderAndNavigateHome}>
-          Pagar
-        </button>
-      )}
-      {showThanks && <div style={{ marginTop: "1rem" }}>Gracias por su compra</div>}
-    </Container>
+    <>
+      <Navbar />
+      <Container>
+        {productAdded.map((product) => (
+          <div style={{ marginTop: "1rem", fontSize: 20 }}>
+            <span>Producto: {product.name}</span>
+            <br />
+            <span>Precio: {product.price}</span>
+            <br />
+            <span>Unidades: {product.quantity}</span>
+          </div>
+        ))}
+        {showButton && (
+          <button onClick={sendOrderAndNavigateHome}>
+            Pagar
+          </button>
+        )}
+        {showThanks && <div style={{ marginTop: "1rem", fontSize: 30 }}>Gracias por su compra!!</div>}
+      </Container>
+    </>
   );
 }
 

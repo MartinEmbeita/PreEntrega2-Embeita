@@ -32,5 +32,3 @@ function ItemListContainer({ categoryId, isCategoryRoute }) {
 }
 
 export default ItemListContainer;
-
-
