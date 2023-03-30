@@ -4,7 +4,7 @@ import CartWidget from "./CartWidget/CartWidget";
 function NavBar() {
   return (
     <div className="NavContainer">
-      <h2>Compañeros Peludos - Tienda Online</h2>
+      <NavLink exact to="/">Compañeros Peludos - Tienda Online</NavLink>
       <div className="links-container">
         <div className="nav-links">
           <NavLink exact to="/">Catalogo</NavLink>
