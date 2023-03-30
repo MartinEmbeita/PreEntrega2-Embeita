@@ -29,7 +29,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-
 import { initializeApp } from "firebase/app";
 import { CustomProvider } from "./components/context";
 
@@ -44,7 +43,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <CustomProvider>
@@ -52,4 +50,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </CustomProvider>
   </React.StrictMode>,
 );
-

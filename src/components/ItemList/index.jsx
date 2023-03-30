@@ -18,5 +18,3 @@ function ItemList({ products }) {
 }
 
 export default ItemList;
-
-

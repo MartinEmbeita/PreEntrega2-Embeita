@@ -1,11 +1,9 @@
 import ItemDetail from "../ItemDetail";
 import { useState, useEffect } from "react";
-import Products from "../../mocks/products";
 import { useParams } from "react-router-dom";
 import { collection, getFirestore, getDocs } from "firebase/firestore";
 
 function ItemDetailContainer({ isItemRoute, itemId }) {
-
 
   const [product, setProduct] = useState();
 
@@ -23,7 +21,6 @@ function ItemDetailContainer({ isItemRoute, itemId }) {
 
   const params = useParams()
 
-
   return (
     <div>
       <ItemDetail />
@@ -32,5 +29,3 @@ function ItemDetailContainer({ isItemRoute, itemId }) {
 }
 
 export default ItemDetailContainer;
-
-
