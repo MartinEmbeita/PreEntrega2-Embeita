@@ -1,10 +1,10 @@
 <h1 align="center">Hola 👋, Soy Martín Embeita</h1>
 
-<h3 align="center">Bienvenidos. Esta es una aplicación de "Tienda Online" donde se puede acceder a un "catálogo" de productos y filtrarlo según la mascota sea "perro" o "gato".</h3>
+<h3 align="center">Bienvenidos. Esta es una aplicación de "Tienda Online" donde se puede acceder a un "Catálogo" de productos y filtrarlo según la mascota sea "Perros" o "Gatos".</h3>
 
-<h3 align="center">Una vez elegido el producto, se accede a su detalle y entonces comprarlo. Ahi se le abrira un menú para "terminar la compra" o "seguir comprando".</h3>
+<h3 align="center">Una vez elegido el producto, se accede a su detalle y entonces comprarlo. Ahi se le abrira un menú para "Terminar la compra" o "Seguir comprando".</h3>
 
-<h3 align="center">Si se presiona el botón de "terminar compra" o se presiona el "carrito" (solo si tiene productos dentro), aparecerá un detalle de la compra efectuada y la posibilidad de pagar. Al presionar el botón "pagar" el carrito quedará en cero y volverá al "home".</h3>
+<h3 align="center">Si se presiona el botón de "Terminar compra" o se presiona el "Carrito" (solo si tiene productos dentro), aparecerá un detalle de la compra efectuada y la posibilidad de pagar. Al presionar el botón "Pagar" el carrito quedará en cero y volverá al home.</h3>
 
 <h3 align="left">En caso de duda conectarme:</h3>
 <p align="left">
