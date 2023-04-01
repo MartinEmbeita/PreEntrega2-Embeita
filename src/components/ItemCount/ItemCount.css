@@ -16,3 +16,7 @@
 .buy-button-container {
   margin-top: 10px;
 }
+
+.addRemove-Button .buy-button-container Button {
+  height: 45px;
+}

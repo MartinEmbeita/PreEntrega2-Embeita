@@ -37,3 +37,11 @@ a:hover {
 img {
   width: 150px;
 }
+
+.cart-messages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 200px);
+  flex-direction: column;
+}

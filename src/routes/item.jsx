@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../components/Navbar";
 import ItemDetailContainer from "../components/ItemDetailContainer/index";
 import { useParams } from "react-router-dom";
 

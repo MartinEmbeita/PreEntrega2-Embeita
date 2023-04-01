@@ -31,18 +31,18 @@ const ItemDetail = () => {
           <p className="item-detail-description">{product.detail}</p>
           {added === 0 && <ItemCount stock={product.stock} onAdd={onAddProduct} />}
         </div>
-
-        {added >= 1 && (
-          <div>
-            <Link to="/cart">
-              <Button className="button-space">Terminar compra</Button>
-            </Link>
-            <Link to="/">
-              <Button>Seguir comprando</Button>
-            </Link>
-          </div>
-        )}
       </div>
+  
+      {added >= 1 && (
+        <div className="item-detail-buttons-container">
+          <Link to="/cart">
+            <Button>Terminar compra</Button>
+          </Link>
+          <Link to="/">
+            <Button>Seguir comprando</Button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

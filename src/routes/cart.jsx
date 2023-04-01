@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { Container } from "react-bootstrap";
 import { Context } from "../components/context/index";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/NavBar";
+import NavBar from "../components/Navbar";
 
 function Cart() {
   const { productAdded, clearCart } = useContext(Context);
@@ -53,8 +53,8 @@ function Cart() {
 
   return (
     <>
-      <Navbar />
-      <Container>
+      <NavBar />
+      <Container style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         {productAdded.map((product) => (
           <div style={{ marginTop: "1rem", fontSize: 20 }}>
             <span>Producto: {product.name}</span>
@@ -65,9 +65,11 @@ function Cart() {
           </div>
         ))}
         {showButton && (
-          <button onClick={sendOrderAndNavigateHome}>
-            Pagar
-          </button>
+          <div style={{ marginTop: "1rem", display: "flex", justifyContent: "center" }}>
+            <button onClick={sendOrderAndNavigateHome}>
+              Pagar
+            </button>
+          </div>
         )}
         {showThanks && <div style={{ marginTop: "1rem", fontSize: 30 }}>Gracias por su compra!!</div>}
       </Container>
